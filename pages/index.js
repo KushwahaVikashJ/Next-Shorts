@@ -74,6 +74,7 @@ export const getStaticProps = async()=>{
         address:res.address,
         id:res._id.toString()
       }))
-    }
+    },
+    revalidate:1,
   }
 }

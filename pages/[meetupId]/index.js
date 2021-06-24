@@ -54,6 +54,6 @@ export const getStaticProps = async(context)=>{
             description:result.description,
             id:result._id.toString()
         }
-      }
+      },
     }
 }
