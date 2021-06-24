@@ -15,7 +15,7 @@ export default function Details({meetupDetails}) {
 // Required while using getStaticProps for dynamic render
 export const getStaticPaths = async()=>{
 
-    const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority')
+    const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority',{ useUnifiedTopology: true })
     const db = client.db(); //to setup the db
 
     const collection = db.collection('nextShort'); //fetch collection
@@ -36,7 +36,7 @@ export const getStaticPaths = async()=>{
 export const getStaticProps = async(context)=>{
     const meetupId = context.params.meetupId;
 
-    const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority')
+    const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority',{ useUnifiedTopology: true })
     const db = client.db(); //to setup the db
 
     const collection = db.collection('nextShort'); //fetch collection

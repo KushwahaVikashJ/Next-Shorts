@@ -57,7 +57,7 @@ export default function Home({result}) {
 // Runs on client side
 export const getStaticProps = async()=>{
 
-  const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority')
+  const client = await MongoClient.connect('mongodb+srv://vikash:vsam@@@1999@mern.yycrx.mongodb.net/nextShort?retryWrites=true&w=majority',{ useUnifiedTopology: true })
   const db = client.db(); //to setup the db
 
   const collection = db.collection('nextShort'); //fetch collection
