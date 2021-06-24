@@ -4,7 +4,6 @@ import MeetupDetails from '../../components/meetups/MeetupDetails';
 export default function Details({meetupDetails}) {
     return (
         <MeetupDetails 
-
             image={meetupDetails.image} 
             title={meetupDetails.title}
             address={meetupDetails.address} 
